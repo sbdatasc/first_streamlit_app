@@ -10,4 +10,4 @@ st.text(" 🐔 Hard-Boiled Free-Range Egg")
 st.text(" 🥑🍞 Avacado Toast")
 
 
-streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
+st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
