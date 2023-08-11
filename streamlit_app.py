@@ -47,10 +47,11 @@ my_data_rows = my_cur.fetchall()
 
 #st.text("Hello from Snowflake:")
 st.text("The fruit load list contains:")
-add_my_fruit_choice = st.text_input('What fruit would you like information about?')
-st.write('The user entered ', add_my_fruit_choice)
-str_choice = "".join(add_my_fruit_choice)
-my_data_rows.append(str_choice)
+add_my_fruit = st.text_input('What fruit would you like information about?')
+
+str_add_choice = "".join([s for s in add_my_fruit])
+st.write('The user entered ', str_add_choice)
+my_data_rows.append(str_add_choice)
 st.dataframe(my_data_rows)
-st.text("Thanks for adding " + str_choice)
+st.text("Thanks for adding " + str_add_choice)
 
