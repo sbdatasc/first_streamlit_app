@@ -40,7 +40,7 @@ except URLError as e:
   st.error()
   
 
-    
+st.stop()    
 # st.write('The user entered ', fruit_choice)
     
 
