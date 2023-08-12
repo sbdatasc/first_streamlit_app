@@ -54,14 +54,14 @@ except URLError as e:
 # import requests
 
 #st.text(fruityvice_response.json())
-
+st.header("View Our Fruit List - Add Your Favorites!")
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
     my_cur.execute("select * from fruit_load_list")
     # my_data_rows = my_cur.fetchall()
     return my_cur.fetchall()
 
-if st.button('Get Fruit Load List'):
+if st.button('Get Fruit List'):
   my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
   my_data_rows = get_fruit_load_list()
   my_cnx.close()
