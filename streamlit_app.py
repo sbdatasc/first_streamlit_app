@@ -36,7 +36,7 @@ st.dataframe(fruits_to_show)
 
 st.header("Fruityvice Fruit Advice!")
 try:
-  fruit_choice = st.text_input('What fruit would you like information about?')
+  fruit_choice = st.text_input('What fruit would you like information about?', 'Information about fruit')
   if not fruit_choice:
     st.error("Please select a fruit to get information")
   else:
@@ -71,7 +71,7 @@ def insert_row_snowflake(new_fruit):
     my_cur.execute("insert into fruit_load_list_values ('from streamlit)")
     return "Thanks for adding " + new_fruit
 
-add_my_fruit = st.text_input("What fruit would you like to add?")
+add_my_fruit = st.text_input('What fruit would you like to add?', 'Add fruit to the list')
 
 if st.button('Add a Fruit to the list'):
   my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
